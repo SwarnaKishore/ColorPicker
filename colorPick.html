@@ -1,0 +1,122 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+   	<script type="text/javascript" src="jscolor.js"></script>
+
+    <title>Color Picker</title>
+
+    <!-- Bootstrap core CSS -->
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body style="background-color:#FFD2C0">
+
+    <div class="container">
+	<p></p>
+	<p></p>
+	<p></p>
+	<p></p>
+	<p></p>
+     <div class="input-group">
+  <span class="input-group-addon">Change Background Color</span>
+  <input  class="form-control color" placeholder="Select Background color" onchange="document.getElementsByTagName('BODY')[0].style.backgroundColor = '#'+this.color">
+</div>
+<p></p>
+
+<div class="input-group">
+ <span class="input-group-addon">Change Background Color of Text</span>
+  <input id="background-txt" class="form-control color" placeholder="Select Background color of Text" onchange="fun1()">
+</div>
+<p></p>
+
+<div class="input-group">
+  <span class="input-group-addon">Change Text Color</span>
+  <input  id="txt-color" class="form-control color" placeholder="Select Text Color" onchange="fun2()">
+</div>
+<p></p>
+
+<div class="input-group">
+  <span class="input-group-addon">Change Heading Color</span>
+  <input  id="heading-color" class="form-control color" placeholder="Select Heading Color" onchange="fun3()">
+</div>
+<p></p>
+
+<div class="input-group">
+  <span class="input-group-addon">Change Button Color</span>
+  <input id="button-color" class="form-control color" placeholder="Select Button Color" onchange="fun4()">
+</div>
+<p></p>
+<p></p>
+<div class="input-group">
+  <span class="input-group-addon">Change Button Text Color</span>
+  <input id="button-txt" class="form-control color" placeholder="Select Button Text Color" onchange="fun5()">
+</div>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+
+      <div id="jumbo" class="jumbotron" style="background-color:#F8A17F;color:white;">
+        <h1 id="jumbo-heading">Change the colors of this webpage</h1>
+        <p id="para" class="lead">You can change the colors of the webpage using the color picker. There are six inputs for which you can change the colors. By clicking each input a Color Picker is poped out for you select your desired color that will reflect the webpage</p>
+		<div  class="btn-group">
+  <button style="background-color:#AA5939" id="jumbo-button" type="button" class="btn btn-lg"><a style="color:white;" id="but-txt" href="#" role="button">Try Now</a></button>
+         </div>
+      
+
+    
+
+    </div> <!-- /container -->
+
+
+	<script>
+function fun1()
+             {
+                 var bg=document.getElementById("background-txt").value;
+                 document.getElementById("jumbo").style.backgroundColor=bg;
+             }
+			 function fun2()
+			 {
+			     var txt=document.getElementById("txt-color").value;
+                 document.getElementById("para").style.color=txt;
+                
+			 }
+			 function fun3()
+			 {
+			     var hd=document.getElementById("heading-color").value;
+                 document.getElementById("jumbo-heading").style.color=hd;
+			 }
+			 
+			  function fun4()
+			 {
+			     var bc=document.getElementById("button-color").value;
+                 document.getElementById("jumbo-button").style.backgroundColor=bc;
+			 }
+			 
+			  function fun5()
+			 {
+			     var bt=document.getElementById("button-txt").value;
+                 document.getElementById("but-txt").style.color=bt;
+			 }
+</script>
+	
+  </body>
+</html>
